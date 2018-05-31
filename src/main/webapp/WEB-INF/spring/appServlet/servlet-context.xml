@@ -52,6 +52,9 @@
 	</beans:bean>
 
 
-
+	 <beans:bean id="viewMappings" class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
+	 	<beans:property name="basename" value="reports/jasperreports-views"/>
+	 	<beans:property name="order" value="0"/>
+	 </beans:bean>
 
 </beans:beans>
