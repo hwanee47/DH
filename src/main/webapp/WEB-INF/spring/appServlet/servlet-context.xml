@@ -5,7 +5,7 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
-		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
 
@@ -19,6 +19,11 @@
 		up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
 
+ 	<beans:bean id="pdfReport" class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView">
+	 	<beans:property name="url" value="classpath:reports/report1.jrxml" />
+        <beans:property name="reportDataKey" value="basketReport" />
+	 </beans:bean>
+
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
 		in the /WEB-INF/views directory -->
@@ -26,7 +31,7 @@
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
-		<beans:property name="order" value="2" />
+		<beans:property name="order" value="3" />
 	</beans:bean>
 
 	<context:component-scan base-package="com.dh.*" />
@@ -40,7 +45,7 @@
 		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
 		<beans:property name="viewClass"
 			value="org.springframework.web.servlet.view.tiles3.TilesView" />
-		<beans:property name="order" value="1" />
+		<beans:property name="order" value="2" />
 	</beans:bean>
 
 	<beans:bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
@@ -52,9 +57,6 @@
 	</beans:bean>
 
 
-	 <beans:bean id="viewMappings" class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
-	 	<beans:property name="basename" value="reports/jasperreports-views"/>
-	 	<beans:property name="order" value="0"/>
-	 </beans:bean>
+	
 
 </beans:beans>

@@ -1,28 +1,53 @@
 <%@ page language="java" contentType="application/pdf; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="net.sf.jasperreports.engine.*" %>
 <%@ page import="net.sf.jasperreports.engine.data.*" %>
+<%@ page import="net.sf.jasperreports.engine.export.*" %>
+<%@ page import="net.sf.jasperreports.engine.util.*" %>
+<%@ page import="net.sf.jasperreports.export.*" %>
+
 <%@ page import="java.io.*" %>
 <%@ page import="java.util.*" %>
 
 <%
-	 try{
-		List<Map<String,String>> dataSource=null;
-		JRDataSource jrDataSource = new JRBeanCollectionDataSource(dataSource);
-		String jrxmlFile = session.getServletContext().getRealPath("WEB-INF/reports/elements.jrxml");
-		
-		InputStream input = new FileInputStream(new File(jrxmlFile));
-		JasperReport jasperReport = JasperCompileManager.compileReport(input);
-		JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, null, jrDataSource);
-		// 
-		//response.get
+	ServletOutputStream servletOutputStream = response.getOutputStream();  
+	ByteArrayOutputStream baos = new ByteArrayOutputStream();
+	 
+	FileInputStream fis;
+	BufferedInputStream bufferedInputStream;
+
+	try{
 		out.clear();
-		out=pageContext.pushBody();
-		ServletOutputStream s = response.getOutputStream();
-		JasperExportManager.exportReportToPdfStream(jasperPrint, s);
-		//JasperExportManager.exportReportToPdfFile(jasperPrint, "test");
-		s.flush();
-		s.close();
+		pageContext.pushBody();
+
+
+         // get report location
+         ServletContext context = getServletContext();
+         String reportLocation = context.getRealPath("WEB-INF");
+          
+         // get report
+         fis = new FileInputStream(reportLocation + "/reports/fonts.jasper");
+         bufferedInputStream = new BufferedInputStream(fis);
+          
+         // fill parameters
+         Map<String, Object> map = new HashMap<String, Object>();
+         
+         map.put("TEST", "헐 된다 ㅋ");
+                          
+         // export to pdf           
+         JasperReport jasperReport = (JasperReport) JRLoader.loadObject(bufferedInputStream);
+         JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport,
+           map, new JREmptyDataSource());
+         JasperExportManager.exportReportToPdfStream(jasperPrint, baos);
+ 
+         response.setContentLength(baos.size());
+         baos.writeTo(servletOutputStream);
+ 
+         // close it
+         fis.close();
+         bufferedInputStream.close();
+
+		
 	}catch (Exception e){
 		e.printStackTrace();
-	} 
+	}  
 %>

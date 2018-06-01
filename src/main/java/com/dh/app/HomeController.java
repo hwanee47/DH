@@ -3,20 +3,24 @@ package com.dh.app;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.dh.common.ComUtlController;
+import net.sf.jasperreports.engine.JRDataSource;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
 /**
  * Handles requests for the application home page.
@@ -43,13 +47,34 @@ public class HomeController {
 		return "main";
 	}
 	
-	@RequestMapping(value = "/reports/test.do")
+	@RequestMapping(value = "/reports/test.pdf")
+	public ModelAndView test(HttpServletRequest request,HttpServletResponse response) throws Exception{
 
-	public ModelAndView test(Map<String, Object> map, ModelMap model) throws Exception{
 
-	          List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
+		List<HashMap<String, String>> list = new ArrayList<HashMap<String,String>>();
+		
+		HashMap<String,String> map =new HashMap<String,String>();
+		
+		map.put("TEST", "DD");
+		
+		list.add(map);
+		
+		
+		JRDataSource basketDS = new JRBeanCollectionDataSource(list);
 
-	          return ComUtlController.render("test", list, "pdf");
+        // In order to use Spring's built-in Jasper support,
+		// We are required to pass our datasource as a map parameter
+		// modelMap is the Model of our application
+		Map<String,Object> modelMap = new HashMap<String,Object>();
+		modelMap.put("basketReport", basketDS);
+
+
+        // pdfReport is the View of our application
+		// This is declared inside the jasper-views.xml
+		ModelAndView modelAndView = new ModelAndView("pdfReport", modelMap);
+
+		// Return the View and the Model combined
+		return modelAndView;
 
 	}
 	
