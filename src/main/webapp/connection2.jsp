@@ -31,7 +31,7 @@
          // fill parameters
          Map<String, Object> map = new HashMap<String, Object>();
          
-         map.put("TEST", "헐 된다 ㅋ");
+         map.put("TEST", "㈜  코 텍");
                           
          // export to pdf           
          JasperReport jasperReport = (JasperReport) JRLoader.loadObject(bufferedInputStream);
