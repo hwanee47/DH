@@ -219,9 +219,11 @@ nav:hover .forAnimate{
     background-color:#20819e;color:#FFF
 }
 
-#div-container-manageUser
+.div-container
 {
 	float:left;
+	margin-left:100px;
+	width:80%;
 }
 /* .fixed{
 	position:fixed;
@@ -229,3 +231,6 @@ nav:hover .forAnimate{
 	width:100%;
 	z-index:1;
 } */
+
+
+

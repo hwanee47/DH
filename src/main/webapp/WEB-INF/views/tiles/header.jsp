@@ -47,6 +47,12 @@
 						<li class="separator">contents</li>
 
 						<li class="#">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="fn_main_headPageMove('manage/vendManage')">
+								<span class="menu-icon pull-right hidden-xs showopacity glyphicon glyphicon-list-alt"></span> 거래처 관리
+							</a>
+						</li>
+						
+						<li class="#">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="fn_main_headPageMove('main')">
 								<span class="menu-icon pull-right hidden-xs showopacity glyphicon glyphicon-list-alt"></span> 소재 정보 관리
 							</a>

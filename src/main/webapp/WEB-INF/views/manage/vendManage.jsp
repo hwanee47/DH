@@ -6,7 +6,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
-
+<link href="${pageContext.request.contextPath}/resources/css/vendManage.css" rel="stylesheet">
+	<script src="${pageContext.request.contextPath}/resources/js/vendManage.js"></script>
 <style>
 
 
