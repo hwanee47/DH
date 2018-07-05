@@ -93,6 +93,14 @@ nav:hover .forAnimate{
 
 /* .....NavBar: Icon only with coloring/layout.....*/
 
+@media (max-width: 767px) {
+	.img-circle{
+		float:left;
+		margin-left:15px;
+	}
+}
+
+
 /*small/medium side display*/
 @media (min-width: 768px) {
 
@@ -170,6 +178,22 @@ nav:hover .forAnimate{
     }
     
    
+   
+   .navbar-header{
+		height:150px;
+	}
+	
+	.navbar-header > .navbar-brand{
+		margin-left:-97px !important;
+		margin-top:80px !important;
+		width:200px !important; 
+	}
+	
+	.img-circle{
+		float:left;
+		margin-top:38px;
+		margin-left:30px;
+	}
 }
 
 /* .....NavBar: Fully showing nav bar..... */
@@ -191,7 +215,32 @@ nav:hover .forAnimate{
     nav.sidebar .forAnimate{
         opacity: 1;
     }
+    
+    
+	.navbar-header{
+		height:150px;
+	}
+	
+	.navbar-header > .navbar-brand{
+		margin-left:-95px !important;
+		margin-top:80px !important;
+		width:200px !important; 
+	}
+	
+	.img-circle{
+		float:left;
+		margin-top:38px;
+		margin-left:30px;
+	}
 }
+
+
+
+
+
+
+
+
 
 
 /********************************************************************/

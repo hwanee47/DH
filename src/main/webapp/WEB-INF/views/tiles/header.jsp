@@ -29,16 +29,15 @@
 		<nav class="navbar navbar-m2p sidebar" role="navigation" id="nav-menu">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
+				<div class="navbar-header" style="background:url('${pageContext.request.contextPath}/resources/images/header-profile.png') no-repeat; background-size:100%;">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
 						<span class="sr-only">Toggle navigation</span> 
 						<span class="icon-bar"></span> 
 						<span class="icon-bar"></span> 
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#"
-						onclick="fn_main_headPageMove('main')"> <b>대 한 정 밀</b>
-					</a>
+					<span><img class="img-circle" src="${pageContext.request.contextPath}/resources/images/business-logo.png"></span>
+					<a class="navbar-brand" href="#" onclick="fn_main_headPageMove('main')" ><b>대 한 정 밀</b> </a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
