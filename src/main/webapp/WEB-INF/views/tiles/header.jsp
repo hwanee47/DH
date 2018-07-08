@@ -12,11 +12,17 @@
 	<meta name="viewport" content="width=device-width,  initial-scale=1, minimum-scale=1">
 	<title>대한정밀</title>
 	<link href="${pageContext.request.contextPath}/resources/css/main.css" rel="stylesheet">
+	<link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.datatables.net/select/1.2.7/css/select.dataTables.min.css" rel="stylesheet">
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+	<script src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
+	
 
 </head>
 
@@ -103,6 +109,8 @@
 		}
 
 		$(document).ready(function() {
+			
+			
 			htmlbodyHeightUpdate();
 			$(window).resize(function() {
 				htmlbodyHeightUpdate();

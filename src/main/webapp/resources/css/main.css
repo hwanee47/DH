@@ -111,9 +111,48 @@ nav:hover .forAnimate{
 
 
 .white-box {
-    background: #fff;
-    float:left;
+    background-color: #fff;
+    margin-top: 16px;
+    margin-left:10px;
+    margin-right:10px;
+    border: none;
+    border: 1px solid #fff;
+    
 }
+
+.panel-danger {
+    border-color: #fc7070 !important;
+}
+
+.table-responsive{
+	width:100%;
+}
+
+.pull-right{
+	margin-top: -16px;
+    font-size: 12px;
+}
+
+.right-side > .content-header > .breadcrumb {
+    margin-top: 8px;
+    box-shadow: none;
+    padding-right: 0;
+    padding-left: 8px;
+    margin-bottom: 25px;
+    border: 0 !important;
+    background-color: #ffffff !important;
+    border-radius: 0;
+    line-height: 24px;
+}
+.breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: #ffffff !important;
+    border-radius: 4px;
+}
+
+
 
 /* .....NavBar: Icon only with coloring/layout.....*/
 
@@ -128,6 +167,15 @@ nav:hover .forAnimate{
 	.img-circle{
 		float:left;
 		margin-left:15px;
+	}
+	
+	.dataTables_length{
+		margin-top: 0px !important; 
+		float:left;
+	}
+	
+	.dataTables_filter{
+		float:right;
 	}
 }
 
@@ -269,7 +317,9 @@ nav:hover .forAnimate{
 
 
 
-
+#example_length{
+	margin-top:9px;
+}
 
 
 

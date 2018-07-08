@@ -3,7 +3,7 @@
 <%@ page import="net.sf.jasperreports.engine.data.*" %>
 <%@ page import="net.sf.jasperreports.engine.export.*" %>
 <%@ page import="net.sf.jasperreports.engine.util.*" %>
-<%@ page import="net.sf.jasperreports.export.*" %>
+<%@ page import="net.sf.jasperreports.*" %>
 
 <%@ page import="java.io.*" %>
 <%@ page import="java.util.*" %>
