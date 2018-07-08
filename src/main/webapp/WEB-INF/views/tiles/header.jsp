@@ -50,11 +50,16 @@
 					<ul class="nav navbar-nav">
 
 						<li class="separator">contents</li>
-
+						
 						<li class="#">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="fn_main_headPageMove('manage/vendManage')">
-								<span class="menu-icon pull-right hidden-xs showopacity glyphicon glyphicon-list-alt"></span> 거래처 관리
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<span class="menu-icon pull-right hidden-xs showopacity glyphicon glyphicon-chevron-down"></span> 거래처 관리
 							</a>
+							<ul class="dropdown-menu forAnimate" role="menu">
+		                        <li><a href="#" class="dropdown-sub-menu" onclick="fn_main_headPageMove('manage/vendManage')"><span class="menu-icon pull-right hidden-xs showopacity glyphicon glyphicon-list-alt"></span> 거래처 목록</a></li>
+		                        <li><a href="#" class="dropdown-sub-menu" onclick="fn_main_headPageMove('manage/vendAdd')"><span class="menu-icon pull-right hidden-xs showopacity 	glyphicon glyphicon-plus"></span> 거래처 등록</a></li>
+		                    </ul>
+							
 						</li>
 						
 						<li class="#">

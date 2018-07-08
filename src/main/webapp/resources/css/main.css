@@ -128,9 +128,10 @@ nav:hover .forAnimate{
 	width:100%;
 }
 
-.pull-right{
+.span-pull-right{
 	margin-top: -16px;
     font-size: 12px;
+    float: right!important;
 }
 
 .right-side > .content-header > .breadcrumb {
@@ -152,6 +153,152 @@ nav:hover .forAnimate{
     border-radius: 4px;
 }
 
+/*datatables search none display*/
+.dataTables_filter {
+	display: none; 
+}
+
+.div-buttonGroup{
+	float:right;
+}
+
+.dropdown-sub-menu{
+	margin-left:15px;
+}
+
+.panel-danger {
+    border-color: #fc7070 !important;
+}
+
+.table-responsive{
+	width:100%;
+}
+
+th { font-size: 12px; }
+td { font-size: 11px; }
+
+
+.ibox-title {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #ffffff;
+    border-color: #e7eaec;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 3px 0 0;
+    color: inherit;
+    margin-bottom: 0;
+    padding: 14px 15px 7px;
+    min-height: 48px;
+}
+
+.ibox-content {
+    clear: both;
+}
+.ibox-content {
+    background-color: #ffffff;
+    color: inherit;
+    padding: 15px 20px 20px 20px;
+    border-color: #e7eaec;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 0;
+}
+
+.ibox:after, .ibox:before {
+    display: table;
+}
+
+.ibox-tools {
+    display: block;
+    float: none;
+    margin-top: 0;
+    position: relative;
+    padding: 0;
+    text-align: right;
+}
+
+.ibox-tools a {
+    cursor: pointer;
+    margin-left: 5px;
+    color: #c4c4c4;
+}
+
+.open>a {
+    outline: 0;
+}
+
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
+
+.ibox-title h5 {
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 0 7px;
+    padding: 0;
+    text-overflow: ellipsis;
+    float: left;
+}
+
+.ibox .ibox-tools.open > .dropdown-menu {
+    left: auto;
+    right: 0;
+}
+
+.right-side > .content-header > .breadcrumb {
+    margin-top: 8px;
+    box-shadow: none;
+    padding-right: 0;
+    padding-left: 8px;
+    margin-bottom: 25px;
+    border: 0 !important;
+    background-color: #ffffff !important;
+    border-radius: 0;
+    line-height: 24px;
+}
+.breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: #ffffff !important;
+    border-radius: 4px;
+}
+
+
+.iradio_square-green.checked {
+    background-position: -168px 0;
+}
+
+@media not all, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
+.icheckbox_square-green, .iradio_square-green {
+    background-image: url(test.png);
+    -webkit-background-size: 240px 24px;
+    background-size: 240px 24px;
+}
+.iradio_square-green {
+    background-position: -120px 0;
+}
+.icheckbox_square-green, .iradio_square-green {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 22px;
+    height: 22px;
+    background: url(../images/green.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
 
 
 /* .....NavBar: Icon only with coloring/layout.....*/

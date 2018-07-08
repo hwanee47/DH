@@ -22,7 +22,7 @@
 	<div class="container-main">
 		<div class="div-header-path">
                 <!--section starts-->
-                <h2>Users List</h2>
+                <h2>거래처목록</h2>
                 <ol class="breadcrumb">
                     <li>
                         <a href="index.html">
@@ -37,170 +37,70 @@
                     </li>
                 </ol>
 		</div>
-
 		
 			<div class="col-lg-12">
 				<div class="panel panel-danger">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-							<i class="fa fa-fw fa-file-text-o"></i> Users List
+							<i class="fa fa-fw fa-file-text-o"></i> 거래처 관리
 						</h4>
-						<span class="pull-right"> <i
+						<span class="span-pull-right"> <i
 							class="glyphicon glyphicon-chevron-up showhide clickable"
 							title="Hide Panel content"></i> <i
 							class="glyphicon glyphicon-remove removepanel"></i>
 						</span>
 					</div>
+					
 					<div class="panel-body table-responsive">
+						<div class="div-buttonGroup">
+							<button type="button" class="btn btn-success btn-lg"><i class="glyphicon glyphicon-search"></i></button>
+						</div>
 						<table id="example" class="table table-striped table-bordered" style="width:100%">
 					        <thead>
 					            <tr>
-					                <th>Name</th>
-					                <th>Position</th>
-					                <th>Office</th>
-					                <th>Age</th>
-					                <th>Start date</th>
-					                <th>Salary</th>
+					                <th>구분</th>
+					                <th>업체명</th>
+					                <th>대표자</th>
+					                <th>사업자번호</th>
+					                <th>업태</th>
+					                <th>종목</th>
+					                <th>주소</th>
+					                <th>전화번호</th>
+					                <th>팩스번호</th>
+					                <th>메일주소</th>
 					            </tr>
 					        </thead>
 					        <tbody>
 					            <tr>
-					                <td>Tiger Nixon</td>
-					                <td>System Architect</td>
-					                <td>Edinburgh</td>
-					                <td>61</td>
-					                <td>2011/04/25</td>
-					                <td>$320,800</td>
+					                <td>매입</td>
+					                <td>(주) 정원텍</td>
+					                <td>유재현</td>
+					                <td>606-81-75569</td>
+					                <td>도,소매</td>
+					                <td>기계공구</td>
+					                <td>부산시 사상구 괘감로 55-19</td>
+					                <td></td>
+					                <td></td>
+					                <td></td>
 					            </tr>
 					            <tr>
-					                <td>Garrett Winters</td>
-					                <td>Accountant</td>
-					                <td>Tokyo</td>
-					                <td>63</td>
-					                <td>2011/07/25</td>
-					                <td>$170,750</td>
+					                <td>매입</td>
+					                <td>(주)대경열처리 진주지점</td>
+					                <td>김봉수</td>
+					                <td>613-85-22807</td>
+					                <td></td>
+					                <td></td>
+					                <td>경남 진주시 사봉면 사곡리 1802-10</td>
+					                <td>055)752-1746</td>
+					                <td>155)752-1749</td>
+					                <td></td>
 					            </tr>
-					            <tr>
-					                <td>Ashton Cox</td>
-					                <td>Junior Technical Author</td>
-					                <td>San Francisco</td>
-					                <td>66</td>
-					                <td>2009/01/12</td>
-					                <td>$86,000</td>
-					            </tr>
-					            <tr>
-					                <td>Cedric Kelly</td>
-					                <td>Senior Javascript Developer</td>
-					                <td>Edinburgh</td>
-					                <td>22</td>
-					                <td>2012/03/29</td>
-					                <td>$433,060</td>
-					            </tr>
-					            <tr>
-					                <td>Airi Satou</td>
-					                <td>Accountant</td>
-					                <td>Tokyo</td>
-					                <td>33</td>
-					                <td>2008/11/28</td>
-					                <td>$162,700</td>
-					            </tr>
-					            <tr>
-					                <td>Brielle Williamson</td>
-					                <td>Integration Specialist</td>
-					                <td>New York</td>
-					                <td>61</td>
-					                <td>2012/12/02</td>
-					                <td>$372,000</td>
-					            </tr>
-					            <tr>
-					                <td>Herrod Chandler</td>
-					                <td>Sales Assistant</td>
-					                <td>San Francisco</td>
-					                <td>59</td>
-					                <td>2012/08/06</td>
-					                <td>$137,500</td>
-					            </tr>
-					            <tr>
-					                <td>Rhona Davidson</td>
-					                <td>Integration Specialist</td>
-					                <td>Tokyo</td>
-					                <td>55</td>
-					                <td>2010/10/14</td>
-					                <td>$327,900</td>
-					            </tr>
-					            <tr>
-					                <td>Colleen Hurst</td>
-					                <td>Javascript Developer</td>
-					                <td>San Francisco</td>
-					                <td>39</td>
-					                <td>2009/09/15</td>
-					                <td>$205,500</td>
-					            </tr>
-					            <tr>
-					                <td>Sonya Frost</td>
-					                <td>Software Engineer</td>
-					                <td>Edinburgh</td>
-					                <td>23</td>
-					                <td>2008/12/13</td>
-					                <td>$103,600</td>
-					            </tr>
-					            <tr>
-					                <td>Jena Gaines</td>
-					                <td>Office Manager</td>
-					                <td>London</td>
-					                <td>30</td>
-					                <td>2008/12/19</td>
-					                <td>$90,560</td>
-					            </tr>
-					            <tr>
-					                <td>Quinn Flynn</td>
-					                <td>Support Lead</td>
-					                <td>Edinburgh</td>
-					                <td>22</td>
-					                <td>2013/03/03</td>
-					                <td>$342,000</td>
-					            </tr>
-					            <tr>
-					                <td>Charde Marshall</td>
-					                <td>Regional Director</td>
-					                <td>San Francisco</td>
-					                <td>36</td>
-					                <td>2008/10/16</td>
-					                <td>$470,600</td>
-					            </tr>
-					            <tr>
-					                <td>Haley Kennedy</td>
-					                <td>Senior Marketing Designer</td>
-					                <td>London</td>
-					                <td>43</td>
-					                <td>2012/12/18</td>
-					                <td>$313,500</td>
-					            </tr>
-					            <tr>
-					                <td>Tatyana Fitzpatrick</td>
-					                <td>Regional Director</td>
-					                <td>London</td>
-					                <td>19</td>
-					                <td>2010/03/17</td>
-					                <td>$385,750</td>
-					            </tr>
-					        </tbody>
-					        <tfoot>
-					            <tr>
-					                <th>Name</th>
-					                <th>Position</th>
-					                <th>Office</th>
-					                <th>Age</th>
-					                <th>Start date</th>
-					                <th>Salary</th>
-					            </tr>
-					        </tfoot>
+					            
 					    </table>
 					</div>
 				</div>
 			</div>
 		</div>
-
 	<script>
 		$(document).ready(function() {
 			$('#example').DataTable({
