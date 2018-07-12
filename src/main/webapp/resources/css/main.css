@@ -279,6 +279,15 @@ td { font-size: 11px; }
     background-position: -168px 0;
 }
 
+
+.b-r {
+    border-right: 1px solid #e7eaec;
+}
+
+.form-group{
+	margin-left:-50px !important;
+}
+
 @media not all, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
 .icheckbox_square-green, .iradio_square-green {
     background-image: url(test.png);

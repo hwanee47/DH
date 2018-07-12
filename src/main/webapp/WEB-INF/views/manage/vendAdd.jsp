@@ -58,97 +58,75 @@
 									<div class="row">
 										<div class="col-sm-6 b-r"><h3 class="m-t-none m-b">거래처 정보</h3>
 											<p>새로운 거래처 정보를 입력해 주십시오.</p>
+											<br>
 											<div class="form-group">
-												<label class="col-sm-2 control-label">구분 *</label>
+												<label class="col-sm-3 control-label">구분 *</label>
 												<div class="col-sm-3 i-checks">
-													<label> <div class="iradio_square-green checked" style="position: relative;"><input type="radio" checked="" value="male" id="gender" name="stu_gender" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> &nbsp;매입 </label>
+													<label> <div class="iradio_square-green checked" style="position: relative;"><input type="radio" checked="" value="매출" id="gender" name="stu_gender" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> &nbsp;매입 </label>
 												</div>
 												<div class="col-sm-3 i-checks">
-													<label> <div class="iradio_square-green" style="position: relative;"><input type="radio" value="female" id="gender" name="stu_gender" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> &nbsp;매출 </label>
+													<label> <div class="iradio_square-green" style="position: relative;"><input type="radio" value="매입" id="gender" name="stu_gender" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> &nbsp;매출 </label>
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="col-sm-2 control-label">성명 *</label>
+												<label class="col-sm-3 control-label">업체명 *</label>
 												<div class="col-sm-8">
-													<input id="stu_name" name="stu_name" type="text" class="form-control" placeholder="안희연">
+													<input id="stu_name" name="stu_name" type="text" class="form-control" placeholder="업체명을 입력해 주십시오.">
 												</div>
 											</div>
 											
 
 
 											<div class="form-group">
-												<label class="col-sm-2 control-label">PIN *</label>
+												<label class="col-sm-3 control-label">대표자 *</label>
 												<div class="col-sm-8">
-													<div class="input-group">
-														<input id="stu_pin" name="stu_pin" type="text" class="form-control" data-mask="999999" placeholder="6자리 PIN번호를 입력해 주십시오.">
-														<span class="input-group-btn">
-															<button type="button" id="check-pin" class="btn btn-primary">중복확인</button> 
-														</span>
-													</div>
-													<div id="check-caption"></div>
+													<input id="stu_name" name="stu_name" type="text" class="form-control" placeholder="대표자를 입력해 주십시오.">
 												</div>												
 											</div>
 											<div class="form-group">
-												<label class="col-sm-2 control-label">휴대폰</label>
+												<label class="col-sm-3 control-label">사업자번호</label>
 												<div class="col-sm-8">
-													<input id="stu_phone" name="stu_phone" type="text" class="form-control" data-mask="(999) 9999-9999" placeholder="휴대폰번호를 입력해 주십시오.">
-												</div>
-											</div>
-											<div class="form-group" id="data_1">
-												<label class="col-sm-2 control-label">생년월일</label>
-												<div class="col-sm-8">
-													<input id="stu_birth" name="stu_birth" type="text" class="form-control" data-mask="9999/99/99" placeholder="2002/07/15">
-													<span class="help-block"> yyyy/mm/dd</span>
-													<!--div class="input-group date">
-														<span class="input-group-addon"><i class="fa fa-calendar"></i></span><input id="stu_birth" name="stu_birth" type="text" class="form-control">
-													</div-->
+													<input id="stu_name" name="stu_name" type="text" class="form-control" placeholder="사업자번호를 입력해 주십시오.">
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="col-sm-2 control-label">결제일</label>
+												<label class="col-sm-3 control-label">업태</label>
 												<div class="col-sm-8">
-													<input name="stu_payday" type="text" class="form-control" data-mask="99" placeholder="수강료 결제일을 입력해 주십시오. 예) 01~31">
+													<input id="stu_name" name="stu_name" type="text" class="form-control" placeholder="업태를 입력해 주십시오.">
 												</div>
 											</div>
 										</div>
 
-										<div class="col-sm-6"><h3 class="m-t-none m-b">학부모정보</h3>
-											<p>학생의 학부모 정보를 입력해 주십시오.</p>
+										<div class="col-sm-6">
+											<br>
 											<div class="form-group">
-												<label class="col-sm-2 control-label">성명 *</label>
+												<label class="col-sm-3 control-label">종목</label>
 												<div class="col-sm-8">
-													<input id="par_name" name="par_name" type="text" class="form-control" placeholder="안희연어머니">
+													<input id="stu_name" name="stu_name" type="text" class="form-control" placeholder="종목를 입력해 주십시오.">
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="col-sm-2 control-label">성별 *</label>
-												<div class="col-sm-3 i-checks">
-													<label> <div class="iradio_square-green" style="position: relative;"><input type="radio" value="male" id="par_gender" name="par_gender" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> &nbsp;남성 </label>
-												</div>
-												<div class="col-sm-3 i-checks">
-													<label> <div class="iradio_square-green checked" style="position: relative;"><input type="radio" value="female" id="par_gender" name="par_gender" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> &nbsp;여성 </label>
+												<label class="col-sm-3 control-label">주소</label>
+												<div class="col-sm-8">
+													<input id="stu_name" name="stu_name" type="text" class="form-control" placeholder="주소를 입력해 주십시오.">
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="col-sm-2 control-label">휴대폰 *</label>
+												<label class="col-sm-3 control-label">전화번호</label>
 												<div class="col-sm-8">
-													<div class="input-group">
-														<input id="par_phone" name="par_phone" type="text" class="form-control" data-mask="(999) 9999-9999" placeholder="휴대폰번호를 입력해 주십시오.">
-														<span class="input-group-btn">
-															<button type="button" id="check-par-phone" class="btn btn-primary">중복확인</button> 
-														</span>
-													</div>
-													<div id="check-par-phone-caption"></div>
+													<input id="stu_name" name="stu_name" type="text" class="form-control" placeholder="전화번호를 입력해 주십시오.">
 												</div>
 											</div>
-											<div class="form-group" id="data_1">
-												<label class="col-sm-2 control-label">생년월일</label>
+											<div class="form-group">
+												<label class="col-sm-3 control-label">팩스번호</label>
 												<div class="col-sm-8">
-													<input id="par_birth" name="par_birth" type="text" class="form-control" data-mask="9999/99/99" placeholder="1977/07/31">
-													<span class="help-block"> yyyy/mm/dd</span>
-													<!--div class="input-group date">
-														<span class="input-group-addon"><i class="fa fa-calendar"></i></span><input id="par_birth" name="par_birth" type="text" class="form-control">
-													</div-->
+													<input id="stu_name" name="stu_name" type="text" class="form-control" placeholder="팩스번호를 입력해 주십시오.">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-sm-3 control-label">이메일주소</label>
+												<div class="col-sm-8">
+													<input id="stu_name" name="stu_name" type="text" class="form-control" placeholder="이메일주소를 입력해 주십시오.">
 												</div>
 											</div>
 										</div>									
