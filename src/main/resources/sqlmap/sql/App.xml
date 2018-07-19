@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+<sqlMap namespace="App">
+
+
+  
+    <insert id="insertVend" parameterClass="Map">
+    	/*App.insertVend*/
+    	INSERT INTO VEND
+    	(
+    		VEND_NAME
+    		,VEND_DIV
+    		,VEND_REP
+    		,VEND_NUM
+    		,VEND_CONDITION
+    		,VEND_JONGMOK
+    		,VEND_ADDR
+    		,VEND_PHONE_NUM
+    		,VEND_FAX_NUM
+    		,VEND_MAIL_ADDR
+    	)
+    	VALUES
+    	(
+    		'$VEND_NAME$'
+    		,'$VEND_DIV$'
+    		,'$VEND_REP$'
+    		,'$VEND_NUM$'
+    		,'$VEND_CONDITION$'
+    		,'$VEND_JONGMOK$'
+    		,'$VEND_ADDR$'
+    		,'$VEND_PHONE_NUM$'
+    		,'$VEND_FAX_NUM$'
+    		,'$VEND_MAIL_ADDR$'
+    	)
+    	
+    
+    </insert>
+    
+    <select id="select" >
+    	SELECT
+    		COUNT(*)
+    	FROM
+    		VEND
+    </select>
+</sqlMap>

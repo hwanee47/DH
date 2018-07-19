@@ -6,6 +6,6 @@
 	<settings useStatementNamespaces="true"/> 
 	
 	<!-- Resource -->
-	<sqlMap resource="sqlmap/sql/Member.xml"/>
+	<sqlMap resource="sqlmap/sql/App.xml"/>
 
 </sqlMapConfig>

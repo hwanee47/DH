@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -21,7 +21,7 @@
 	<div class="container-main">
 		<div class="div-header-path">
                 <!--section starts-->
-                <h2>°Å·¡Ã³ µî·Ï</h2>
+                <h2>ê±°ë˜ì²˜ ë“±ë¡</h2>
                 <ol class="breadcrumb">
                     <li>
                         <a href="index.html">
@@ -41,58 +41,58 @@
 					<div class="col-lg-12">
 						<div class="ibox float-e-margins">
 							<div class="ibox-title">
-								<h5>°Å·¡Ã³ µî·Ï <small>You can register new customer information here.</small></h5>
+								<h5>ê±°ë˜ì²˜ ë“±ë¡ <small>You can register new customer information here.</small></h5>
 								<div class="ibox-tools">
 									<a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size:15px;">
 										<i class="fa fa-question-circle"></i>
 									</a>
 									<div class="dropdown-menu dropdown-user" style="width:300px;">
-										<span style="background-color:#ffaf23; color:#fff; border-radius:0.25em; display:inline-block;margin:5px; padding:5px 10px; text-align:center; vertical-align:baseline; font-size:12px; line-height:1; white-space:nowrap;">Tip. °Å·¡Ã³ µî·Ï</span>
-										<p style="margin:5px 10px 10px;">°Å·¡Ã³ Á¤º¸¸¦ ÀÔ·ÂÇÒ ¼ö ÀÖ½À´Ï´Ù. </p>
+										<span style="background-color:#ffaf23; color:#fff; border-radius:0.25em; display:inline-block;margin:5px; padding:5px 10px; text-align:center; vertical-align:baseline; font-size:12px; line-height:1; white-space:nowrap;">Tip. ê±°ë˜ì²˜ ë“±ë¡</span>
+										<p style="margin:5px 10px 10px;">ê±°ë˜ì²˜ ì •ë³´ë¥¼ ì…ë ¥í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤. </p>
 									</div>
 								</div>
 							</div>
 
 							<div class="ibox-content">
-								<form action="http://demo.happyaca.com/student/process" method="post" class="form-horizontal">
+								<form  method="post" class="form-horizontal">
 									<div class="row">
-										<div class="col-sm-6 b-r"><h3 class="m-t-none m-b">°Å·¡Ã³ Á¤º¸</h3>
-											<p>»õ·Î¿î °Å·¡Ã³ Á¤º¸¸¦ ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À.</p>
+										<div class="col-sm-6 b-r"><h3 class="m-t-none m-b">ê±°ë˜ì²˜ ì •ë³´</h3>
+											<p>ìƒˆë¡œìš´ ê±°ë˜ì²˜ ì •ë³´ë¥¼ ì…ë ¥í•´ ì£¼ì‹­ì‹œì˜¤.</p>
 											<br>
 											<div class="form-group">
-												<label class="col-sm-3 control-label">±¸ºĞ *</label>
+												<label class="col-sm-3 control-label">êµ¬ë¶„ *</label>
 												<div class="col-sm-3 i-checks">
-													<label> <div class="iradio_square-green checked" style="position: relative;"><input type="radio" checked="" value="¸ÅÃâ" id="gender" name="stu_gender" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> &nbsp;¸ÅÀÔ </label>
+													 <div class="iradio_square-green" id="div-radio1"  style="position: relative;"><input type="radio" name="vendDiv" value="ë§¤ì…" class="radio" style="position: absolute; opacity: 0;" ><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> &nbsp;ë§¤ì… 
 												</div>
 												<div class="col-sm-3 i-checks">
-													<label> <div class="iradio_square-green" style="position: relative;"><input type="radio" value="¸ÅÀÔ" id="gender" name="stu_gender" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> &nbsp;¸ÅÃâ </label>
+													 <div class="iradio_square-green" id="div-radio2" style="position: relative;"><input type="radio" name="vendDiv" value="ë§¤ì¶œ" class="radio" style="position: absolute; opacity: 0;" ><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> &nbsp;ë§¤ì¶œ 
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="col-sm-3 control-label">¾÷Ã¼¸í *</label>
+												<label class="col-sm-3 control-label">ì—…ì²´ëª… *</label>
 												<div class="col-sm-8">
-													<input id="stu_name" name="stu_name" type="text" class="form-control" placeholder="¾÷Ã¼¸íÀ» ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À.">
+													<input id="stu_name" name="vendName" type="text" class="form-control" placeholder="ì—…ì²´ëª…ì„ ì…ë ¥í•´ ì£¼ì‹­ì‹œì˜¤.">
 												</div>
 											</div>
 											
 
 
 											<div class="form-group">
-												<label class="col-sm-3 control-label">´ëÇ¥ÀÚ *</label>
+												<label class="col-sm-3 control-label">ëŒ€í‘œì *</label>
 												<div class="col-sm-8">
-													<input id="stu_name" name="stu_name" type="text" class="form-control" placeholder="´ëÇ¥ÀÚ¸¦ ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À.">
+													<input id="stu_name" name="vendRep" type="text" class="form-control" placeholder="ëŒ€í‘œìë¥¼ ì…ë ¥í•´ ì£¼ì‹­ì‹œì˜¤.">
 												</div>												
 											</div>
 											<div class="form-group">
-												<label class="col-sm-3 control-label">»ç¾÷ÀÚ¹øÈ£</label>
+												<label class="col-sm-3 control-label">ì‚¬ì—…ìë²ˆí˜¸</label>
 												<div class="col-sm-8">
-													<input id="stu_name" name="stu_name" type="text" class="form-control" placeholder="»ç¾÷ÀÚ¹øÈ£¸¦ ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À.">
+													<input id="stu_name" name="vendNum" type="text" class="form-control" placeholder="ì‚¬ì—…ìë²ˆí˜¸ë¥¼ ì…ë ¥í•´ ì£¼ì‹­ì‹œì˜¤.">
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="col-sm-3 control-label">¾÷ÅÂ</label>
+												<label class="col-sm-3 control-label">ì—…íƒœ</label>
 												<div class="col-sm-8">
-													<input id="stu_name" name="stu_name" type="text" class="form-control" placeholder="¾÷ÅÂ¸¦ ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À.">
+													<input id="stu_name" name="vendCondition" type="text" class="form-control" placeholder="ì—…íƒœë¥¼ ì…ë ¥í•´ ì£¼ì‹­ì‹œì˜¤.">
 												</div>
 											</div>
 										</div>
@@ -100,33 +100,33 @@
 										<div class="col-sm-6">
 											<br>
 											<div class="form-group">
-												<label class="col-sm-3 control-label">Á¾¸ñ</label>
+												<label class="col-sm-3 control-label">ì¢…ëª©</label>
 												<div class="col-sm-8">
-													<input id="stu_name" name="stu_name" type="text" class="form-control" placeholder="Á¾¸ñ¸¦ ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À.">
+													<input id="stu_name" name="vendJongMok" type="text" class="form-control" placeholder="ì¢…ëª©ë¥¼ ì…ë ¥í•´ ì£¼ì‹­ì‹œì˜¤.">
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="col-sm-3 control-label">ÁÖ¼Ò</label>
+												<label class="col-sm-3 control-label">ì£¼ì†Œ</label>
 												<div class="col-sm-8">
-													<input id="stu_name" name="stu_name" type="text" class="form-control" placeholder="ÁÖ¼Ò¸¦ ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À.">
+													<input id="stu_name" name="vendAddr" type="text" class="form-control" placeholder="ì£¼ì†Œë¥¼ ì…ë ¥í•´ ì£¼ì‹­ì‹œì˜¤.">
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="col-sm-3 control-label">ÀüÈ­¹øÈ£</label>
+												<label class="col-sm-3 control-label">ì „í™”ë²ˆí˜¸</label>
 												<div class="col-sm-8">
-													<input id="stu_name" name="stu_name" type="text" class="form-control" placeholder="ÀüÈ­¹øÈ£¸¦ ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À.">
+													<input id="stu_name" name="vendPhoneNum" type="text" class="form-control" placeholder="ì „í™”ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ ì£¼ì‹­ì‹œì˜¤.">
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="col-sm-3 control-label">ÆÑ½º¹øÈ£</label>
+												<label class="col-sm-3 control-label">íŒ©ìŠ¤ë²ˆí˜¸</label>
 												<div class="col-sm-8">
-													<input id="stu_name" name="stu_name" type="text" class="form-control" placeholder="ÆÑ½º¹øÈ£¸¦ ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À.">
+													<input id="stu_name" name="vendFaxNum" type="text" class="form-control" placeholder="íŒ©ìŠ¤ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ ì£¼ì‹­ì‹œì˜¤.">
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="col-sm-3 control-label">ÀÌ¸ŞÀÏÁÖ¼Ò</label>
+												<label class="col-sm-3 control-label">ì´ë©”ì¼ì£¼ì†Œ</label>
 												<div class="col-sm-8">
-													<input id="stu_name" name="stu_name" type="text" class="form-control" placeholder="ÀÌ¸ŞÀÏÁÖ¼Ò¸¦ ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À.">
+													<input id="stu_name" name="vendMailAddr" type="text" class="form-control" placeholder="ì´ë©”ì¼ì£¼ì†Œë¥¼ ì…ë ¥í•´ ì£¼ì‹­ì‹œì˜¤.">
 												</div>
 											</div>
 										</div>									
@@ -134,7 +134,7 @@
 									<div class="hr-line-dashed"></div>
 									<div class="row">
 										<div class="col-sm-offset-10 col-sm-2 text-right">
-											<button id="add-submit" type="submit" class="btn btn-primary pull-right m-t-n-xs btn-submit"><i class="fa fa-pencil"></i> µî·ÏÇÏ±â</button>
+											<button id="add-submit" type="submit" class="btn btn-primary pull-right m-t-n-xs btn-submit"><i class="fa fa-pencil"></i> ë“±ë¡í•˜ê¸°</button>
 										</div>
 									</div>
 								</form>
@@ -158,6 +158,23 @@
 			/* $('#example tbody').on( 'click', 'tr', function () {
 		        $(this).toggleClass('selected');
 		    } ); */
+		    
+			
+		});
+		
+		/*radio click*/
+		//iradio_square-greenì„ í¬í•¨í•˜ëŠ” classì°¾ì•„ì„œ ì´ë²¤íŠ¸ì²˜ë¦¬.
+		$("[class*=iradio_square-green]").click(function(){
+			$(this).children().first().attr('checked','checked');
+			
+			$(".checked").attr('class','iradio_square-green');
+			$(this).attr('class','iradio_square-green checked');
+		});
+		
+		
+		/*add buttion click*/
+		$("#add-submit").click(function(){
+			$(".form-horizontal").attr('action','${pageContext.request.contextPath }/app/addVend.do').submit();
 		});
 	</script>
 </body>
