@@ -18,4 +18,6 @@ import java.util.List;
 public interface AppService {
 	
 	public void addVend(HashMap<String, String> map) throws Exception;
+	
+	public List<HashMap<String,String>> searchVendList() throws Exception;
 }

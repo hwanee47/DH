@@ -73,10 +73,22 @@ public class AppController {
 		
 		//model.addAttribute("machineList", list);
 		
-		return "redirect:/home/searchMachineList.do";
+		return "redirect:/app/searchVendList.do";
 	}
 	
-	
+	@RequestMapping(value = "/searchVendList.do")
+	public String searchVendList(HttpServletRequest request, ModelMap model) throws Exception{
+		
+		if(true) {
+			throw new Exception("!");
+		}
+		
+		List<HashMap<String,String>> list = appService.searchVendList();
+		
+		model.addAttribute("vendList", list);
+		
+		return "manage/vendManage";
+	}
 	
 	
 	

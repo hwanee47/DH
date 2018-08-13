@@ -18,7 +18,8 @@
 </style>
 </head>
 <body>
-
+	<form  method="post" class="form-search">
+	</form>
 	<div class="container-main">
 		<div class="div-header-path">
                 <!--section starts-->
@@ -53,7 +54,7 @@
 					
 					<div class="panel-body table-responsive">
 						<div class="div-buttonGroup">
-							<button type="button" class="btn btn-success btn-lg"><i class="glyphicon glyphicon-search"></i></button>
+							<button type="button" class="btn btn-success btn-lg" id="btn_search"><i class="glyphicon glyphicon-search"></i></button>
 						</div>
 						<table id="example" class="table table-striped table-bordered" style="width:100%">
 					        <thead>
@@ -71,31 +72,21 @@
 					            </tr>
 					        </thead>
 					        <tbody>
-					            <tr>
-					                <td>매입</td>
-					                <td>(주) 정원텍</td>
-					                <td>유재현</td>
-					                <td>606-81-75569</td>
-					                <td>도,소매</td>
-					                <td>기계공구</td>
-					                <td>부산시 사상구 괘감로 55-19</td>
-					                <td></td>
-					                <td></td>
-					                <td></td>
-					            </tr>
-					            <tr>
-					                <td>매입</td>
-					                <td>(주)대경열처리 진주지점</td>
-					                <td>김봉수</td>
-					                <td>613-85-22807</td>
-					                <td></td>
-					                <td></td>
-					                <td>경남 진주시 사봉면 사곡리 1802-10</td>
-					                <td>055)752-1746</td>
-					                <td>155)752-1749</td>
-					                <td></td>
-					            </tr>
-					            
+					           <c:forEach var="vendList" items="${vendList}">
+					    			<tr>
+					    				<td>${vendList.VEND_DIV}</td>
+						                <td>${vendList.VEND_NAME}</td>
+						                <td>${vendList.VEND_REP}</td>
+						                <td>${vendList.VEND_NUM}</td>
+						                <td>${vendList.VEND_CONDITION}</td>
+						                <td>${vendList.VEND_JONGMOK}</td>
+						                <td>${vendList.VEND_ADDR}</td>
+						                <td>${vendList.VEND_PHONE_NUM}</td>
+						                <td>${vendList.VEND_FAX_NUM}</td>
+						                <td>${vendList.VEND_MAIL_ADDR}</td>
+					            	</tr>
+					    		</c:forEach>
+					        </tbody> 
 					    </table>
 					</div>
 				</div>
@@ -112,6 +103,11 @@
 			/* $('#example tbody').on( 'click', 'tr', function () {
 		        $(this).toggleClass('selected');
 		    } ); */
+		    
+			/*search buttion click*/
+			$("#btn_search").click(function(){
+				$(".form-search").attr('action','${pageContext.request.contextPath}/app/searchVendList.do').submit();
+			});
 		});
 	</script>
 </body>

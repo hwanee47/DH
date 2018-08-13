@@ -17,4 +17,6 @@ import java.util.List;
 
 public interface AppDAO {
 	public void insertVend(HashMap<String, String> map) throws Exception;
+	
+	public List<HashMap<String,String>> selectVendList() throws Exception;
 }

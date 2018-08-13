@@ -36,10 +36,11 @@
     
     </insert>
     
-    <select id="select" >
+    <select id="selectVendList"  resultClass="HashMap">
     	SELECT
-    		COUNT(*)
+    		*
     	FROM
     		VEND
+    	ORDER BY VEND_NUM
     </select>
 </sqlMap>

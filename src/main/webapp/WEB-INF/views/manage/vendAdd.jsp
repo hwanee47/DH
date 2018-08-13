@@ -134,7 +134,7 @@
 									<div class="hr-line-dashed"></div>
 									<div class="row">
 										<div class="col-sm-offset-10 col-sm-2 text-right">
-											<button id="add-submit" type="submit" class="btn btn-primary pull-right m-t-n-xs btn-submit"><i class="fa fa-pencil"></i> 등록하기</button>
+											<button id="add_submit" type="submit" class="btn btn-primary pull-right m-t-n-xs btn-submit"><i class="fa fa-pencil"></i> 등록하기</button>
 										</div>
 									</div>
 								</form>
@@ -173,8 +173,8 @@
 		
 		
 		/*add buttion click*/
-		$("#add-submit").click(function(){
-			$(".form-horizontal").attr('action','${pageContext.request.contextPath }/app/addVend.do').submit();
+		$("#add_submit").click(function(){
+			$(".form-horizontal").attr('action','${pageContext.request.contextPath}/app/addVend.do').submit();
 		});
 	</script>
 </body>

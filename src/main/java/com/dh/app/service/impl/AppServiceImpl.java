@@ -1,6 +1,7 @@
 package com.dh.app.service.impl;
 
 import java.util.HashMap;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,6 +32,13 @@ public class AppServiceImpl  implements AppService{
 	@Override
 	public void addVend(HashMap<String, String> map) throws Exception{
 		appDAO.insertVend(map);
+	}
+
+
+
+	@Override
+	public List<HashMap<String,String>> searchVendList() throws Exception {
+		return appDAO.selectVendList();
 	}
 	
 	

@@ -31,9 +31,13 @@ public class AppDAOImpl extends EgovAbstractDAO implements AppDAO {
 	@Override
 	public void insertVend(HashMap<String, String> map) throws Exception {
 		insert("App.insertVend", map);
-		
-		List<HashMap<String,String>> list = (List<HashMap<String,String>> ) list("App.select");
-		System.out.println("record : "+list.size());
+	}
+
+
+	@Override
+	public List<HashMap<String, String>> selectVendList() throws Exception {
+		List<HashMap<String, String>> list = (List<HashMap<String,String>> ) list("App.selectVendList");
+		return list;
 	}
 
 	
