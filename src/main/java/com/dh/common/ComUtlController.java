@@ -43,7 +43,7 @@ public class ComUtlController {
 			    link=link.substring(0,link.indexOf(","));
 			}
 		}
-		
+		System.out.println("륑크 :::"+link);
 		return link;
 	}
 	

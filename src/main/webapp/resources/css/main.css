@@ -213,7 +213,7 @@ td { font-size: 11px; }
 
 .ibox-tools {
     display: block;
-    float: none;
+    float: right;
     margin-top: 0;
     position: relative;
     padding: 0;

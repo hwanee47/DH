@@ -63,9 +63,13 @@
 						</li>
 						
 						<li class="#">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="fn_main_headPageMove('main')">
-								<span class="menu-icon pull-right hidden-xs showopacity glyphicon glyphicon-list-alt"></span> 소재 정보 관리
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<span class="menu-icon pull-right hidden-xs showopacity glyphicon glyphicon-chevron-down"></span> 소재 정보 관리
 							</a>
+							<ul class="dropdown-menu forAnimate" role="menu">
+		                        <li><a href="#" class="dropdown-sub-menu" onclick="fn_main_headPageMove('manage/materialManage')"><span class="menu-icon pull-right hidden-xs showopacity glyphicon glyphicon-list-alt"></span> 소재 목록</a></li>
+		                        <li><a href="#" class="dropdown-sub-menu" onclick="fn_main_headPageMove('manage/materialAdd')"><span class="menu-icon pull-right hidden-xs showopacity 	glyphicon glyphicon-plus"></span> 소재 등록</a></li>
+		                    </ul>
 						</li>
 						
 						<li class="#">

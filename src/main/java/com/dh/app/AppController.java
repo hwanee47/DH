@@ -1,8 +1,6 @@
 package com.dh.app;
 
-import java.text.DateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
@@ -20,6 +18,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.dh.app.service.AppService;
@@ -77,17 +76,22 @@ public class AppController {
 	}
 	
 	@RequestMapping(value = "/searchVendList.do")
-	public String searchVendList(HttpServletRequest request, ModelMap model) throws Exception{
-		
-		if(true) {
-			throw new Exception("!");
-		}
-		
+	public String searchVendList(HttpServletRequest request, @RequestParam(value="program", required=false) String program, ModelMap model) throws Exception{
 		List<HashMap<String,String>> list = appService.searchVendList();
 		
 		model.addAttribute("vendList", list);
 		
-		return "manage/vendManage";
+		if(program == null) {
+			return "manage/vendManage";
+		}
+		
+		if(program.equals("popup")) {
+			return "common/vendPopup";
+		}else {
+			throw new Exception();
+		}
+		
+		
 	}
 	
 	
