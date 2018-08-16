@@ -37,7 +37,7 @@
         <tbody>
            <c:forEach var="vendList" items="${vendList}">
     			<tr>
-    				<td>${vendList.SEQ}</td>
+    				<td>${vendList.seq}</td>
 	                <td>${vendList.VEND_NAME}</td>
 	                <td>${vendList.VEND_REP}</td>
 	                <td>${vendList.VEND_ADDR}</td>
@@ -51,7 +51,7 @@
 		$(document).ready(function() {
 			$('#example').DataTable({
 				select: {
-		            style: 'multi'
+		            style: 'single'
 		        }
 			});
 			
@@ -63,6 +63,23 @@
 			$(".form-search").attr('action','${pageContext.request.contextPath}/app/searchVendList.do?program=popup').submit();
 		});
 		
+		
+		/*거래처 테이블 Row 더블클릭 이벤트*/
+		$('#example tbody').on('dblclick', 'tr', function () {
+			var data = $('#example').DataTable().row( this ).data();
+			
+			//거래처 코드
+			$(parent.document).find("#input_seq").val(data[1]);
+			
+			//거래처 명
+			$(parent.document).find("#input_vendName").val(data[1]);
+			
+			//팝업닫기
+			$(parent.document).find('#btn_closePopup').click();
+		    
+		});
+
+
 	</script>
 </body>
 </html>

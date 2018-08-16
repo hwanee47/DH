@@ -130,7 +130,7 @@
 	  <div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+				<button type="button" class="close" data-dismiss="modal" id="btn_closePopup"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
 				<h3 class="modal-title" id="lineModalLabel">거래처 목록</h3>
 			</div>
 			<div class="modal-body">
