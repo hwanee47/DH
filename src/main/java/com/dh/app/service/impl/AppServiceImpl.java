@@ -40,6 +40,13 @@ public class AppServiceImpl  implements AppService{
 	public List<HashMap<String,String>> searchVendList() throws Exception {
 		return appDAO.selectVendList();
 	}
+
+
+
+	@Override
+	public void addMaterial(HashMap<String, Object> map) throws Exception {
+		appDAO.insertMaterial(map);
+	}
 	
 	
 	

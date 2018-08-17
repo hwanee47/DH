@@ -5,14 +5,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+
 <title>Insert title here</title>
-<link
-	href="${pageContext.request.contextPath}/resources/css/vendManage.css"
-	rel="stylesheet">
-<script
-	src="${pageContext.request.contextPath}/resources/js/vendManage.js"></script>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="${pageContext.request.contextPath}/resources/css/vendManage.css" rel="stylesheet">
+<script src="${pageContext.request.contextPath}/resources/js/vendManage.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <style>
 </style>
 </head>
@@ -68,7 +68,7 @@
 											<div class="form-group">
 												<label class="col-sm-3 control-label">품번 *</label>
 												<div class="col-sm-8">
-													<input id="input_itemNum" name="itemNum" type="text" class="form-control" placeholder="품번을 입력해 주십시오.">
+													<input id="input_itemNum" name="itemNumber" type="text" class="form-control" placeholder="품번을 입력해 주십시오.">
 												</div>												
 											</div>
 											<div class="form-group">
@@ -102,7 +102,7 @@
 											<div class="form-group">
 												<label class="col-sm-3 control-label">거래처</label>
 												<div class="col-sm-8">
-													<input id="input_seq" name="seq" type="hidden" class="form-control">
+													<input id="input_seq" name="vendSeq" type="hidden" class="form-control">
 													<input id="input_vendName" name="vendName" type="text" class="form-control" placeholder="거래처를 입력해 주십시오.">
 												</div>
 											</div>
@@ -143,35 +143,24 @@
 	</div>
 	
 	<script>
-	
+	<c:if test="${code eq '1'}">
+		alert('${msg}');
+	</c:if>
 		$(document).ready(function() {
 			$('#example').DataTable({
-				select: {
+				select: {	
 		            style: 'multi'
 		        }
 			});
 			
 			
-			/* $('#example tbody').on( 'click', 'tr', function () {
-		        $(this).toggleClass('selected');
-		    } ); */
-		    
-			
-		});
-		
-		/*radio click*/
-		//iradio_square-green을 포함하는 class찾아서 이벤트처리.
-		$("[class*=iradio_square-green]").click(function(){
-			$(this).children().first().attr('checked','checked');
-			
-			$(".checked").attr('class','iradio_square-green');
-			$(this).attr('class','iradio_square-green checked');
+
 		});
 		
 		
 		/*add buttion click*/
 		$("#add_submit").click(function(){
-			$(".form-horizontal").attr('action','${pageContext.request.contextPath}/app/addVend.do').submit();
+			$(".form-horizontal").attr('action','${pageContext.request.contextPath}/app/addMaterial.do').submit();
 		});
 		
 		
@@ -184,9 +173,7 @@
 		});
 		
 		
-		$("#btn_search").click(function(){
-			$(".form-search").attr('action','${pageContext.request.contextPath}/app/searchVendList.do?program=popup').submit();
-		})
+		
 	</script>
 </body>
 </html>

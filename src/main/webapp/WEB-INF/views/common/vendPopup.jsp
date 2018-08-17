@@ -69,7 +69,7 @@
 			var data = $('#example').DataTable().row( this ).data();
 			
 			//거래처 코드
-			$(parent.document).find("#input_seq").val(data[1]);
+			$(parent.document).find("#input_seq").val(data[0]);
 			
 			//거래처 명
 			$(parent.document).find("#input_vendName").val(data[1]);

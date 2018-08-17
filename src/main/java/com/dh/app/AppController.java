@@ -52,7 +52,7 @@ public class AppController {
 	
 	
 	@RequestMapping(value = "/addVend.do", method = RequestMethod.POST)
-	public String addmachine(HttpServletRequest request, @ModelAttribute("vend") Vend vend, ModelMap model) throws Exception{
+	public String addVend(HttpServletRequest request, @ModelAttribute("vend") Vend vend, ModelMap model) throws Exception{
 		
 		HashMap<String, String> map = new HashMap<String, String>();
 		map.put("VEND_DIV", vend.getVendDiv());
@@ -94,6 +94,17 @@ public class AppController {
 		
 	}
 	
+
+	@RequestMapping(value = "/addMaterial.do", method = RequestMethod.POST)
+	public String addMaterial(HttpServletRequest request, @RequestParam HashMap<String, Object> map, ModelMap model) throws Exception{
+		
+		appService.addMaterial(map);
+		
+		model.addAttribute("code", "1");
+		model.addAttribute("msg", "등록하였습니다.");
+		
+		return "manage/materialAdd";
+	}
 	
 	
 	@RequestMapping(value = "/reports/test.pdf")

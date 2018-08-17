@@ -6,7 +6,7 @@
   
     <insert id="insertVend" parameterClass="Map">
     	/*App.insertVend*/
-    	INSERT INTO VEND
+    	INSERT INTO MNG_VEND_TB
     	(
     		VEND_NAME
     		,VEND_DIV
@@ -33,14 +33,39 @@
     		,'$VEND_MAIL_ADDR$'
     	)
     	
-    
     </insert>
     
     <select id="selectVendList"  resultClass="HashMap">
     	SELECT
     		*
     	FROM
-    		VEND
+    		MNG_VEND_TB
     	ORDER BY VEND_NUM
     </select>
+    
+    
+    <insert id="insertMaterial" parameterClass="Map">
+    	/*App.insertMaterial*/
+    	INSERT INTO MNG_MATERIAL_TB
+    	(
+    		MODEL
+    		,ITEM_NUMBER
+    		,ITEM_NAME
+    		,QUALITY_MATERIAL
+    		,HEAT_TREATMENT_HARDNESS
+    		,REMARKS
+    		,VEND_SEQ
+    	)
+    	VALUES
+    	(
+    		'$model$'
+    		,'$itemNumber$'
+    		,'$itemName$'
+    		,'$qualityMaterial$'
+    		,'$heatTreatmentHardness$'
+    		,'$remarks$'
+    		,'$vendSeq$'
+    	)
+    	
+    </insert>
 </sqlMap>

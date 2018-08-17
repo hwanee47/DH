@@ -40,5 +40,11 @@ public class AppDAOImpl extends EgovAbstractDAO implements AppDAO {
 		return list;
 	}
 
+
+	@Override
+	public void insertMaterial(HashMap<String, Object> map) throws Exception {
+		insert("App.insertMaterial", map);
+	}
+
 	
 }
