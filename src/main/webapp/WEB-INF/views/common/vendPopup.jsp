@@ -37,7 +37,7 @@
         <tbody>
            <c:forEach var="vendList" items="${vendList}">
     			<tr>
-    				<td>${vendList.seq}</td>
+    				<td>${vendList.SEQ}</td>
 	                <td>${vendList.VEND_NAME}</td>
 	                <td>${vendList.VEND_REP}</td>
 	                <td>${vendList.VEND_ADDR}</td>
