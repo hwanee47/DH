@@ -7,8 +7,7 @@ import org.apache.log4j.Logger;
 import org.springframework.stereotype.Repository;
 
 import com.dh.app.dao.AppDAO;
-
-import egovframework.rte.psl.dataaccess.EgovAbstractDAO;
+import com.dh.common.dao.AbstractDAO;
 
 /**
  * @Class Name : AppDAOImpl.java
@@ -23,7 +22,7 @@ import egovframework.rte.psl.dataaccess.EgovAbstractDAO;
  */
 
 @Repository
-public class AppDAOImpl extends EgovAbstractDAO implements AppDAO {
+public class AppDAOImpl extends AbstractDAO implements AppDAO {
 
 	private static final Logger logger = Logger.getLogger(AppDAOImpl.class);
 	
@@ -36,7 +35,7 @@ public class AppDAOImpl extends EgovAbstractDAO implements AppDAO {
 
 	@Override
 	public List<HashMap<String, String>> selectVendList() throws Exception {
-		List<HashMap<String, String>> list = (List<HashMap<String,String>> ) list("App.selectVendList");
+		List<HashMap<String, String>> list = (List<HashMap<String,String>> ) selectList("App.selectVendList");
 		return list;
 	}
 
