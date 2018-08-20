@@ -67,4 +67,23 @@
     	)
     	
     </insert>
+    
+    
+    <select id="selectMaterialList" resultType="HashMap" parameterType="HashMap">
+		/*App.selectMaterialList*/
+		SELECT
+    		B.VEND_NAME
+    		,A.MODEL
+    		,A.ITEM_NUMBER
+    		,A.ITEM_NAME
+    		,A.QUALITY_MATERIAL
+    		,A.HEAT_TREATMENT_HARDNESS
+    		,A.REMARKS
+    	FROM
+    		MNG_MATERIAL_TB A
+    		,MNG_VEND_TB B
+    	WHERE
+    		A.VEND_SEQ = B.SEQ
+    	ORDER BY VEND_NUM
+	</select>
 </mapper>

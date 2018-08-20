@@ -91,7 +91,6 @@ public class AppController {
 			throw new Exception();
 		}
 		
-		
 	}
 	
 
@@ -106,6 +105,25 @@ public class AppController {
 		return "manage/materialAdd";
 	}
 	
+	
+
+	@RequestMapping(value = "/searchMaterialList.do")
+	public String searchMaterialList(HttpServletRequest request, @RequestParam(value="program", required=false) String program, ModelMap model) throws Exception{
+		List<HashMap<String,String>> list = appService.searchMaterialList();
+		
+		model.addAttribute("materialList", list);
+		
+		if(program == null) {
+			return "manage/materialManage";
+		}
+		
+		if(program.equals("popup")) {
+			return "common/vendPopup";
+		}else {
+			throw new Exception();
+		}
+		
+	}
 	
 	@RequestMapping(value = "/reports/test.pdf")
 	public ModelAndView test(HttpServletRequest request,HttpServletResponse response) throws Exception{

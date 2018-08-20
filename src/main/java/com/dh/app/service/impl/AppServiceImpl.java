@@ -47,6 +47,13 @@ public class AppServiceImpl  implements AppService{
 	public void addMaterial(HashMap<String, Object> map) throws Exception {
 		appDAO.insertMaterial(map);
 	}
+
+
+
+	@Override
+	public List<HashMap<String, String>> searchMaterialList() throws Exception {
+		return appDAO.selectMaterialList();
+	}
 	
 	
 	

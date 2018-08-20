@@ -524,3 +524,7 @@ td { font-size: 11px; }
 
 
 
+.div-header-path > h2
+{
+	margin-left : 15px;
+}

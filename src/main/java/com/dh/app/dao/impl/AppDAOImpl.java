@@ -35,14 +35,19 @@ public class AppDAOImpl extends AbstractDAO implements AppDAO {
 
 	@Override
 	public List<HashMap<String, String>> selectVendList() throws Exception {
-		List<HashMap<String, String>> list = (List<HashMap<String,String>> ) selectList("App.selectVendList");
-		return list;
+		return (List<HashMap<String,String>> ) selectList("App.selectVendList");
 	}
 
 
 	@Override
 	public void insertMaterial(HashMap<String, Object> map) throws Exception {
 		insert("App.insertMaterial", map);
+	}
+
+
+	@Override
+	public List<HashMap<String, String>> selectMaterialList() throws Exception {
+		return (List<HashMap<String,String>> ) selectList("App.selectMaterialList");
 	}
 
 	

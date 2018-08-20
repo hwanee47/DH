@@ -21,4 +21,6 @@ public interface AppDAO {
 	public void insertMaterial(HashMap<String, Object> map) throws Exception;
 	
 	public List<HashMap<String,String>> selectVendList() throws Exception;
+	
+	public List<HashMap<String,String>> selectMaterialList() throws Exception;
 }
