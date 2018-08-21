@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Appenders>
+		<Console name="console" target="org.apache.log4j.ConsoleAppender">
+			<PatternLayout pattern="%d %5p [%c] %m%n" />
+		</Console>
+	</Appenders>
+	<Loggers>
+
+
+		<!-- Application Loggers -->
+		<logger name="com.dh.xml" additivity="false">
+			<level value="debug" />
+			<appender-ref ref="console" />
+		</logger>
+
+		<!-- Query Loggers -->
+		<logger name="jdbc.sqlonly" additivity="false">
+			<level value="info" />
+			<appender-ref ref="console" />
+		</logger>
+
+		<logger name="jdbc.resultset" additivity="false"> 
+	        <level value="off"/> 
+	        <appender-ref ref="console"/> 
+	    </logger> 
+
+
+		<root level="info" additivity="false">
+			<appender-ref ref="console" />
+		</root>
+	</Loggers>
+</Configuration>

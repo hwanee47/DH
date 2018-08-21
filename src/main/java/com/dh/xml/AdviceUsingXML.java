@@ -1,17 +1,35 @@
 package com.dh.xml;
 
-import java.util.List;
-
-import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.log4j.Logger;
-import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
 
 
-
-
+@Aspect
 public class AdviceUsingXML {
-	//TODO [Step 1-6] AdviceUsingXML 작성
+	private static final Logger log = Logger.getLogger(AdviceUsingXML.class);
+	static String name = "";
+	static String type = "";
+	
+	@Around("execution(* com..*Controller.*(..)) or execution(* com..service.*Impl.*(..)) or execution(* com..dao.*DAO.*(..))")
+	public Object logPrint(ProceedingJoinPoint joinPoint) throws Throwable {
+		type = joinPoint.getSignature().getDeclaringTypeName();
+		
+		if (type.indexOf("Controller") > -1) {
+			name = "Controller  \t:  ";
+		}
+		else if (type.indexOf("Service") > -1) {
+			name = "ServiceImpl  \t:  ";
+		}
+		else if (type.indexOf("DAO") > -1) {
+			name = "DAO  \t\t:  ";
+		}
+		log.debug(name + type + "." + joinPoint.getSignature().getName() + "()");
+		System.out.println("FSDFSDFSDFSDFSFDSFD");
+		return joinPoint.proceed();
+	}
+	/*//TODO [Step 1-6] AdviceUsingXML 작성
 	private static final Logger LOGGER = Logger.getLogger(AdviceUsingXML.class);
 
 	public void beforeTargetMethod(JoinPoint thisJoinPoint) {
@@ -111,7 +129,7 @@ public class AdviceUsingXML {
 		LOGGER.debug("AdviceUsingXML.aroundTargetMethod end. Time({"+(time2 - time1)+"})");
 
 		return retVal;
-	}
+	}*/
 
 }
 
